@@ -1,23 +1,20 @@
 body{
 	background: url("https://media.istockphoto.com/vectors/abstract-technology-background-blue-circuit-board-vector-id996285860");
 }
+
+
 a{
   text-decoration: none;
-  border: 2px solid black;
-  border-radius:10px;
-  padding: 20px;
-  position:absolute;
-  left: 45%;
-  margin-top:10px;
   font-size:15pt;
   font-weight: bolder;
-  color:black;
+  color: black;
 }
 h1{
   text-align: center;
 }
 h2{
   text-align: center;
+  
 }
 
 .quiz, .summary{

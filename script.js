@@ -59,7 +59,7 @@ var i;
 $(function() {
 
 
-//clicking on the start quiz button hides the start page and shows the quiz page while firing the showQuestion() function
+//clicking on the start quiz button hides the start page and shows the quiz page 
 	$(".start a").on("click", function(e) {
 	    e.preventDefault();
 		$(".start").hide();
@@ -67,7 +67,6 @@ $(function() {
         showQuestion();
    });
 
-//when you click the li in the quiz answers it adds a class that highlights the answer and removes the class from whatever has the .selected class
    $(".quiz ul").on('click', 'li', function(){
     $('.selected').removeClass('selected')   
     $(this).addClass('selected');
@@ -85,15 +84,13 @@ $(function() {
     }
    });
 
-//
+
    $('.summary a').click(function(e){
        e.preventDefault();
        restartQuiz();
    });
 });
 
-//This function changes the header to the current question's title, gets rid of the html in the <ul> and replaces it with the 
-//answers in the question array with what is in the variable
 function showQuestion() {
 	current = question[currentQuestion];
 	$(".quiz h2").text(current.title);
@@ -105,7 +102,6 @@ function showQuestion() {
 
 //checks if the answer is correct if it is correct it will add an increment to the score variable, if it is not, nothing happens.
 function checkAnswer(guess) {
-    // question = question[currentQuestion];
     if(current.correctAnswer === guess){
         score++;
     }
@@ -114,16 +110,15 @@ function checkAnswer(guess) {
     if(currentQuestion >= question.length){
         showSummary();
     } else{
-//calls the showQuestion function to show the next question after it checks the answer
     showQuestion();
     };
 };
 
-//hides the quiz page and shows the summary page while injecting the congratulations text into the summary page
+//Finishes the quiz 
 function showSummary() {
     $(".quiz").hide();
     $(".summary").show();
-    $(".summary p").text('Congrats! You scored '+score+' out of '+question.length+' !!')
+    $(".summary p").text('You scored '+score+' out of '+question.length+' !!')
 }
 
 function restartQuiz(){
