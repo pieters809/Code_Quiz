@@ -1,27 +1,44 @@
 body{
-	background: url("https://media.istockphoto.com/vectors/abstract-technology-background-blue-circuit-board-vector-id996285860");
+  background-color: #b7ced2;
+  text-align: center;
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center;
+  min-height:100vh;
 }
 
 
 a{
   text-decoration: none;
-  font-size:15pt;
+  font-size:20pt;
   font-weight: bolder;
   color: black;
 }
-h1{
+
+
+.start{
   text-align: center;
-}
-h2{
-  text-align: center;
-  
+  font-size: 20pt;
 }
 
-.quiz, .summary{
+.quiz{
   display:none;
+  font-size: 25px;
+} 
+.quiz li:hover,a:hover{
+  background-color:silver;
+  
+}
+li {
+  display:table;
+  margin:0px auto 0px auto;
+}
+
+.summary{
+  display:none;
+  font-size: 25px;
 }
 
 .selected{
   background-color: grey; 
 }
-  
